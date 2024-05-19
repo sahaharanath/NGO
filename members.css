@@ -1,0 +1,294 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 56px; /* Add padding to body to prevent content from being covered by the fixed header */
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Make the header position fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 0.5rem 1rem; /* Adjusted padding */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero-small {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-small .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-small h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Members Section */
+.members-section {
+    padding: 60px 0;
+}
+
+.members-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.members-section .member-card {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.members-section .member-card img {
+    margin-bottom: 15px;
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.members-section .member-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.members-section .member-card p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Board Members and Advisory Committee Sections */
+.board-members,
+.advisory-committee {
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.board-members h2,
+.advisory-committee h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.board-members .member-card,
+.advisory-committee .member-card {
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid gray;
+}
+
+.board-members .member-card img,
+.advisory-committee .member-card img {
+    margin-bottom: 15px;
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+.board-members .member-card h4,
+.advisory-committee .member-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.board-members .member-card p,
+.advisory-committee .member-card p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 991px) {
+    .board-members .col-lg-3,
+    .advisory-committee .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .board-members .col-lg-3,
+    .advisory-committee .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .members-section .col-lg-2 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 575px) {
+    .members-section .col-lg-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+}
+
+footer h4 {
+    font-weight: bold;
+}
+
+footer ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer ul li a:active {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer .list-inline-item a {
+    color: #007bff;
+    font-size: 20px;
+}
+
+footer .list-inline-item a:hover,
+footer .list-inline-item a:focus {
+    color: #0056b3;
+}
+
+@media (max-width: 991px) {
+    .board-members .col-lg-3,
+    .advisory-committee .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .board-members .col-lg-3,
+    .advisory-committee .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .members-section .col-lg-2 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 575px) {
+    .members-section .col-lg-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.img-fluid {
+    border: 2px solid #4285F4; /* Initial color */
+    animation: borderColorChange 16s infinite; /* 16s for 8 cycles */
+}
+
+@keyframes borderColorChange {
+    0% { border-color: #4285F4; }    /* Blue */
+    5% { border-color: #FBBC05; }    /* Yellow */
+    10% { border-color: #4285F4; }   /* Blue */
+    15% { border-color: #FBBC05; }   /* Yellow */
+    20% { border-color: #4285F4; }   /* Blue */
+    25% { border-color: #FBBC05; }   /* Yellow */
+    30% { border-color: #4285F4; }   /* Blue */
+    35% { border-color: #FBBC05; }   /* Yellow */
+    40% { border-color: #4285F4; }   /* Blue */
+    45% { border-color: #FBBC05; }   /* Yellow */
+    50% { border-color: #4285F4; }   /* Blue */
+    55% { border-color: #FBBC05; }   /* Yellow */
+    60% { border-color: #4285F4; }   /* Blue */
+    65% { border-color: #FBBC05; }   /* Yellow */
+    70% { border-color: #4285F4; }   /* Blue */
+    75% { border-color: #FBBC05; }   /* Yellow */
+    80% { border-color: #4285F4; }   /* Blue */
+    85% { border-color: #FBBC05; }   /* Yellow */
+    90% { border-color: #4285F4; }   /* Blue */
+    95% { border-color: #FBBC05; }   /* Yellow */
+    100% { border-color: #4285F4; }  /* Back to Blue */
+}
+
+.board-members .member-card,
+.advisory-committee .member-card {
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    animation: borderColorChangeMemberCard 15s infinite, backgroundColorChange 15s infinite; /* Animations for border and background */
+}
+
+@keyframes borderColorChangeMemberCard {
+    0% { border-color: gray; }         /* Initial gray */
+    20% { border-color: #5DADE2; }     /* Light Blue */
+    40% { border-color: #58D68D; }     /* Light Green */
+    60% { border-color: #F5B041; }     /* Light Orange */
+    80% { border-color: #AF7AC5; }     /* Light Purple */
+    100% { border-color: gray; }       /* Back to gray */
+}
+
+@keyframes backgroundColorChange {
+    0% { background-color: #fff; }     /* Initial white */
+    20% { background-color: #E8F8F5; } /* Very light green */
+    40% { background-color: #E8F6F3; } /* Very light blue */
+    60% { background-color: #FEF9E7; } /* Very light yellow */
+    80% { background-color: #FDEDEC; } /* Very light pink */
+    100% { background-color: #fff; }   /* Back to white */
+}
