@@ -203,6 +203,11 @@ footer .list-inline-item a:focus {
 
 .programs .card,
 .updates .card {
-    border-radius: 0;
-    border: 1px solid #FF8400;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.card-img-top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
