@@ -84,8 +84,92 @@
             </div>
         </div>
     </section>
-
-    <!-- Donation Section -->
+    <!-- Registration Form Section -->
+    <!-- Registration Form Section -->
+    <!-- Registration Form Section -->
+    <!-- Registration Form Section -->
+    <section class="get-involved">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="registration-form">
+                        <h2 class="text-center mb-4">Membership Registration</h2>
+                        <p class="text-center mb-5">Join our mission to create a better world by becoming a member of our NGO.</p>
+                        <form id="registrationForm" action="submit_registration.php" method="POST">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" inputmode="numeric" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control" id="gender" name="gender" required>
+                                        <option value="" disabled selected>Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="Occupation" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="address" name="address" rows="3" placeholder="Full Address" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Pin Code" inputmode="numeric" pattern="\d*" required>
+                            </div>
+                            <div class="form-group">
+                                <h4 class="mb-3">Terms and Conditions</h4>
+                                <ol class="terms-list">
+                                    <li>
+                                        <span class="term-number">1.</span>
+                                        <span class="term-text">No direct connection with any political parties or any activity aligned with politics.</span>
+                                    </li>
+                                    <li>
+                                        <span class="term-number">2.</span>
+                                        <span class="term-text">Obliged to follow the internal rules policies of the organization.</span>
+                                    </li>
+                                    <li>
+                                        <span class="term-number">3.</span>
+                                        <span class="term-text">Participate in meeting are mandatory, Apart active participation shall be expected in our activity.</span>
+                                    </li>
+                                    <li>
+                                        <span class="term-number">4.</span>
+                                        <span class="term-text">Never been convicted as per IPC or CrPC and currently, there are no criminal cases in your name.</span>
+                                    </li>
+                                    <li>
+                                        <span class="term-number">5.</span>
+                                        <span class="term-text">Agreed to accept the decision of organization.</span>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck">I agree to the terms and conditions</label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Donation Section -->
     <section class="donation">
         <div class="container">
             <h2>Donate</h2>

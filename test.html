@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #203342;
+            color: #ffffff;
+            font-family: "Muli", sans-serif;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 70px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<p>This page was viewed</p>
+<h1 id="count">0</h1>
+<p>times</p>
+<script>
+    const count = document.getElementById("count");
+
+    // Your JSONBin details
+    const binId = '664b249fe41b4d34e4f69818'; // Your Bin ID
+    const secretKey = '$2a$10$KySdTavv2KB800i0LJn6AOHXHbXaqTSLdqL93akZoKZlYDutra5QS'; // Your actual Secret Key
+    const apiUrl = `https://api.jsonbin.io/v3/b/${binId}`;
+
+    countVisits();
+
+    function countVisits() {
+        fetch(apiUrl, {
+            headers: {
+                'X-Master-Key': secretKey
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                let visits = data.record.visits;
+                visits++;
+                count.innerHTML = visits;
+
+                // Update the visit count in JSONBin
+                fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': secretKey
+                    },
+                    body: JSON.stringify({ visits: visits })
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+</body>
+</html>

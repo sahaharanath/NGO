@@ -1,0 +1,139 @@
+<!-- test.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="test.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="website-stats">
+    <div class="container">
+        <h2>Our Impact</h2>
+        <div class="stats-row">
+            <div class="stat">
+                <span class="stat-number">17</span>
+                <br>
+                <span class="stat-label">People Helped</span>
+                <span class="stat-tooltip" data-toggle="tooltip" data-placement="bottom" title="This represents the total number of individuals who have benefited from our programs and services."></span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">01</span>
+                <br>
+                <span class="stat-label">Programs Initiated</span>
+                <span class="stat-tooltip" data-toggle="tooltip" data-placement="bottom" title="We have launched these programs to address various social issues and make a positive impact."></span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="visitor-count">0</span>
+                <br>
+                <span class="stat-label">Total Visitors</span>
+                <span class="stat-tooltip" data-toggle="tooltip" data-placement="bottom" title="This represents the number of individuals who have visited our website to learn more about our organization."></span>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section id="third-party-auto-counter">
+    <script type="text/javascript" src="https://freehitcounters.org/count/fjln"></script><br>
+    <a href='https://www.pferdeversicherung.at/pferdelebensversicherung/'>Pferdelebensversicherung</a> <script type='text/javascript' src='https://whomania.com/ctr?id=bb501a329d326399bd262cd2c0be0504dc049dac'></script>
+</section>
+<script src="test.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+/* test.css */
+.website-stats {
+    padding: 80px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.website-stats:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("stats-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.website-stats h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    margin: 0 50px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffc107;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.stat-label {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stat-tooltip {
+    font-size: 18px;
+    color: #ffc107;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+window.addEventListener('load', function() {
+    // Find the external counter element
+    const externalCounter = document.querySelector('script[src*="freehitcounters.org"]');
+
+    // Check if the external counter element exists
+    if (externalCounter) {
+        // Extract the visitor count from the external counter
+        const visitorCount = externalCounter.nextSibling.textContent.trim();
+
+        // Update the visitor-count element with the extracted value
+        const visitorCountElement = document.getElementById('visitor-count');
+        visitorCountElement.textContent = visitorCount;
+    } else {
+        console.error('External counter not found.');
+    }
+});
+
+
+
+
+
+
+

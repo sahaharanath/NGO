@@ -122,7 +122,6 @@ header {
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
-    border: 2px solid gray;
 }
 
 .board-members .member-card img,
@@ -264,31 +263,3 @@ footer .list-inline-item a:focus {
     100% { border-color: #4285F4; }  /* Back to Blue */
 }
 
-.board-members .member-card,
-.advisory-committee .member-card {
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    border: 2px solid gray;
-    animation: borderColorChangeMemberCard 15s infinite, backgroundColorChange 15s infinite; /* Animations for border and background */
-}
-
-@keyframes borderColorChangeMemberCard {
-    0% { border-color: gray; }         /* Initial gray */
-    20% { border-color: #5DADE2; }     /* Light Blue */
-    40% { border-color: #58D68D; }     /* Light Green */
-    60% { border-color: #F5B041; }     /* Light Orange */
-    80% { border-color: #AF7AC5; }     /* Light Purple */
-    100% { border-color: gray; }       /* Back to gray */
-}
-
-@keyframes backgroundColorChange {
-    0% { background-color: #fff; }     /* Initial white */
-    20% { background-color: #E8F8F5; } /* Very light green */
-    40% { background-color: #E8F6F3; } /* Very light blue */
-    60% { background-color: #FEF9E7; } /* Very light yellow */
-    80% { background-color: #FDEDEC; } /* Very light pink */
-    100% { background-color: #fff; }   /* Back to white */
-}

@@ -36,6 +36,167 @@ header {
     color: #007bff;
 }
 
+/* Hero Section Styles */
+.hero {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero .lead {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* About Section Styles */
+.about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Programs Section Styles */
+.programs {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.programs h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.programs .card {
+    margin-bottom: 30px;
+}
+
+.programs .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Updates Section Styles */
+.updates {
+    padding: 60px 0;
+}
+
+.updates h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.updates .card {
+    margin-bottom: 30px;
+}
+
+.updates .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Get Involved Section Styles */
+.get-involved {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.get-involved h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.get-involved p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.get-involved .btn {
+    margin: 0 10px;
+}
+
+/* Contact Form Styles */
+.contact .form-control {
+    border-radius: 0;
+}
+
+.contact .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.contact .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+}
+
+footer h4 {
+    font-weight: bold;
+}
+
+footer ul li a {
+    color: #007bff; /* Change quick links to blue initially */
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #0056b3; /* Change color on hover to deep blue */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+footer ul li a:active {
+    color: #0056b3; /* Change color when clicked to deep blue */
+    text-decoration: underline; /* Add underline when clicked */
+}
+
+footer .list-inline-item a {
+    color: #007bff; /* Change social media icons to blue initially */
+    font-size: 20px;
+}
+
+footer .list-inline-item a:hover,
+footer .list-inline-item a:focus {
+    color: #0056b3; /* Change color on hover/focus to deep blue */
+}
 /* Hero Section */
 .hero-small {
     height: 300px;
@@ -66,172 +227,205 @@ header {
     font-weight: bold;
 }
 
-/* Members Section */
-.members-section {
+/* Volunteer Section */
+.volunteer {
     padding: 60px 0;
 }
 
-.members-section h2 {
+.volunteer h2 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.members-section .member-card {
+.volunteer-card {
     margin-bottom: 30px;
     text-align: center;
 }
 
-.members-section .member-card img {
+.volunteer-card img {
     margin-bottom: 15px;
-    border-radius: 50%;
-    max-width: 150px;
 }
 
-.members-section .member-card h4 {
+.volunteer-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Donation Section */
+.donation {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.donation h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.donation p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Other Ways to Get Involved Section */
+.other-ways {
+    padding: 60px 0;
+}
+
+.other-ways h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.other-ways ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Registration Form Styles */
+.get-involved {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.2px solid gray;
+    transition-duration: 0.5s;
+}
+
+.registration-form:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.registration-form h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.registration-form p {
+    color: #777;
+}
+
+.registration-form .form-group {
+    margin-bottom: 25px;
+}
+
+.registration-form .form-control {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    font-size: 16px;
+    height: auto;
+}
+
+.registration-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.registration-form select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 35px;
+}
+
+.registration-form h4 {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.members-section .member-card p {
-    font-size: 14px;
-    margin-bottom: 0;
+.registration-form .terms-list {
+    padding-left: 0;
+    list-style: none;
 }
 
-/* Board Members and Advisory Committee Sections */
-.board-members,
-.advisory-committee {
-    padding: 60px 0;
-    margin-bottom: 60px;
+.registration-form .terms-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
-.board-members h2,
-.advisory-committee h2 {
-    font-size: 32px;
+.registration-form .term-number {
     font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-right: 10px;
 }
 
-.board-members .member-card,
-.advisory-committee .member-card {
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    border: 2px solid gray;
+.registration-form .term-text {
+    flex: 1;
+    text-align: left;
 }
 
-.board-members .member-card img,
-.advisory-committee .member-card img {
-    margin-bottom: 15px;
-    border-radius: 50%;
-    max-width: 200px;
+.registration-form .btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 0;
+    background-color: #007bff;
+    border-color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-.board-members .member-card h4,
-.advisory-committee .member-card h4 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.registration-form .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
-.board-members .member-card p,
-.advisory-committee .member-card p {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-@media (max-width: 991px) {
-    .board-members .col-lg-3,
-    .advisory-committee .col-lg-3 {
-        flex: 0 0 50%;
-        max-width: 50%;
+/* Adjust form styles for smaller screens if needed */
+@media (max-width: 768px) {
+    .registration-form {
+        padding: 30px;
     }
 }
 
-@media (max-width: 767px) {
-    .board-members .col-lg-3,
-    .advisory-committee .col-lg-3 {
-        flex: 0 0 100%;
-        max-width: 100%;
+/* Adjust form styles for smaller screens if needed */
+@media (max-width: 768px) {
+    .registration-form {
+        padding: 30px;
     }
 
-    .members-section .col-lg-2 {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
-
-@media (max-width: 575px) {
-    .members-section .col-lg-2 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-/* Footer Styles */
-footer {
-    background-color: #f8f9fa;
-    padding: 30px 0;
-}
-
-footer h4 {
-    font-weight: bold;
-}
-
-footer ul li a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer ul li a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-footer ul li a:active {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-footer .list-inline-item a {
-    color: #007bff;
-    font-size: 20px;
-}
-
-footer .list-inline-item a:hover,
-footer .list-inline-item a:focus {
-    color: #0056b3;
-}
-
-@media (max-width: 991px) {
-    .board-members .col-lg-3,
-    .advisory-committee .col-lg-3 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 767px) {
-    .board-members .col-lg-3,
-    .advisory-committee .col-lg-3 {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .registration-form h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
     }
 
-    .members-section .col-lg-2 {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
-
-@media (max-width: 575px) {
-    .members-section .col-lg-2 {
-        flex: 0 0 50%;
-        max-width: 50%;
+    .registration-form .btn-primary {
+        font-size: 16px;
     }
 }
