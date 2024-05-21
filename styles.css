@@ -343,3 +343,96 @@ footer .list-inline-item a:focus {
     cursor: pointer;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
+.contact {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact .contact-header {
+    margin-bottom: 40px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #666;
+}
+
+.contact fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact .form-group {
+    margin-bottom: 20px;
+}
+
+.contact .form-control {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+    height: 46px;
+    font-size: 16px;
+}
+
+.contact .form-control:hover {
+    border-radius: 15px;
+    border-color: #0062cc;
+}
+
+.contact .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact .btn-primary:hover {
+    background-color: #0062cc;
+    border-color: #0062cc;
+    border-radius: 15px;
+}
+
+.contact .btn-primary:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+#message {
+    height: 120px;
+}
+
+.contact .form-group select {
+    padding-right: 30px;
+    appearance: none;
+    background-image: none;
+    font-family: inherit;
+    background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M6%209l4-5H2z%22%2F%3E%3C%2Fsvg%3E") no-repeat right 10px center;
+}
+
+.contact .form-group select::-ms-expand {
+    display: none;
+}

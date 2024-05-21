@@ -309,7 +309,7 @@ footer .list-inline-item a:focus {
 .registration-form {
     background-color: #fff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 0;
     /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
     border: 0.2px solid gray;
     transition-duration: 0.5s;
