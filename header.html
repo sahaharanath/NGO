@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom CSS styles here */
+        :root {
+            --primary-color: rgba(0, 123, 255, 0.38);
+            --icon-color: #007bff; /* New variable for icon color */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid #007bff;
+        }
+
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-left: 15px; /* Add left margin */
+        }
+
+        .navbar-nav {
+            margin-left: 15px; /* Add left margin to nav items */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-right: 15px;
+            font-size: 1rem; /* Slightly increased font size */
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color);
+        }
+        /* Add your custom CSS styles here */
+        :root {
+            --primary-color: rgba(0, 123, 255, 0.38);
+            --icon-color: #007bff; /* Color for icons */
+            --icon-hover-color: #0056b3; /* Deeper blue color for hover state */
+        }
+
+        .navbar-nav .nav-item .nav-link .fas {
+            color: var(--icon-color); /* Set icon color */
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .navbar-nav .nav-item .nav-link:hover .fas {
+            color: var(--icon-hover-color); /* Set icon color on hover */
+        }
+
+        .navbar-toggler {
+            border: none;
+            color: var(--primary-color); /* Change color to match navbar-brand */
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-nav .nav-item .nav-link .fas {
+            margin-right: 5px;
+            color: var(--icon-color); /* Set icon color */
+        }
+
+        /* Additional padding for small screens */
+        /* Additional styles for small screens */
+        @media (max-width: 991.98px) {
+            .navbar-nav .nav-link {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-nav .nav-link .fas {
+                width: 1.5rem; /* Adjust the width as needed */
+                text-align: center;
+                margin-right: 0.5rem;
+                margin-left: 15px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img style="height: 30px" src="Logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html"><i class="fas fa-hands-helping"></i> Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="getInvolved.html"><i class="fas fa-users"></i> Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.html"><i class="fas fa-rupee-sign"></i> Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="members.html"><i class="fas fa-user-friends"></i> Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

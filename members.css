@@ -8,33 +8,7 @@ body {
 }
 
 /* Header Styles */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Make the header position fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    padding: 0.5rem 1rem; /* Adjusted padding */
-}
-
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.nav-link {
-    font-weight: 500;
-    color: #333;
-}
-
-.nav-link:hover {
-    color: #007bff;
-}
+/*Imported from footer.html via headerAndFooter.js*/
 
 /* Hero Section */
 .hero-small {
@@ -172,40 +146,6 @@ header {
     }
 }
 
-/* Footer Styles */
-footer {
-    background-color: #f8f9fa;
-    padding: 30px 0;
-}
-
-footer h4 {
-    font-weight: bold;
-}
-
-footer ul li a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer ul li a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-footer ul li a:active {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-footer .list-inline-item a {
-    color: #007bff;
-    font-size: 20px;
-}
-
-footer .list-inline-item a:hover,
-footer .list-inline-item a:focus {
-    color: #0056b3;
-}
 
 @media (max-width: 991px) {
     .board-members .col-lg-3,
@@ -263,3 +203,48 @@ footer .list-inline-item a:focus {
     100% { border-color: #4285F4; }  /* Back to Blue */
 }
 
+
+/* Footer Styles */
+/*Imported from footer.html via headerAndFooter.js*/
+
+
+/*Scrollbar Change*/
+/* Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid #f1f1f1; /* Space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin; /* Make scrollbar thinner */
+    scrollbar-color: #888 #f1f1f1; /* Set colors for the thumb and track */
+}
+
+/* Edge */
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: #888 #f1f1f1; /* Set colors for the thumb and track */
+        scrollbar-width: thin; /* Make scrollbar thinner */
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for the whole document */
+}

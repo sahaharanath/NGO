@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+
+    <style>
+
+        :root {
+            --primary-color: rgba(0, 123, 255, 0.38);
+        }
+
+        /* Footer Styles */
+        .custom-footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid #ffc107;
+
+        }
+
+        .custom-footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('footer-bg.jpg');
+            background-repeat: repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .custom-footer h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .custom-footer h4::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .custom-footer p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .custom-footer-text-about{
+            margin-right: 50px;
+
+        }
+        .custom-footer ul li i {
+            font-size: 18px;
+            margin-left: -5px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!-- Footer -->
+<footer class="custom-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h4 class="custom-footer-heading">About Us</h4>
+                <p class="custom-footer-text-about">In memory of Santu Besra, the Santu Foundation is dedicated to positive change. Inspired by his compassion, we empower underserved communities through essential resources, healthcare, and education, fostering dignity and resilience.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h4 class="custom-footer-heading">Quick Links</h4>
+                <ul class="list-unstyled custom-footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="getInvolved.html">Get Involved</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <h4 class="custom-footer-heading">Contact Us</h4>
+                <p class="custom-footer-contact-info">
+                    Address: Mirapota Bazar, Bujrukdighi<br>
+                    Purba Bardhaman, West Bengal - 713423<br>
+                    Phone: <br>
+                    Email:
+                </p>
+                <ul class="list-inline custom-footer-social">
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-youtube fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="mailto:info@ngowebsite.org"><i class="fas fa-envelope fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-whatsapp fa-fw"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="text-center custom-footer-copyright">&copy; 2024 Santu Foundation. All Rights Reserved | Developed and Managed by <a href="https://www.instagram.com/haranath_saha/" target="_blank" class="developer-link">Haranath Saha </a> <a href="https://www.instagram.com/haranath_saha/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a> <a href="https://m.facebook.com/profile.php?id=100074083171557" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a></p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

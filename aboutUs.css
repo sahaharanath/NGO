@@ -1,42 +1,34 @@
 /* General Styles */
+/* This section sets the root variables for colors, font families, etc. */
+:root {
+    --primary-color: rgba(0, 123, 255, 0.38);
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --font-family: 'Open Sans', sans-serif;
+    --heading-font-family: 'Montserrat', sans-serif;
+}
+
+/* This section sets the global styles for the body element */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
-    padding-top: 56px; /* Add padding to body to prevent content from being covered by the fixed header */
+    color: var(--dark-color);
+    padding-top: 56px; /* Adds padding to the top to accommodate the fixed header */
+}
+
+/* This section sets the styles for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-family);
+    font-weight: bold;
 }
 
 /* Header Styles */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Make the header position fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    padding: 0.5rem 1rem; /* Adjusted padding */
-}
-
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.nav-link {
-    font-weight: 500;
-    color: #333;
-}
-
-.nav-link:hover {
-    color: #007bff;
-}
+/*Imported from footer.html via headerAndFooter.js*/
 
 /* Hero Section */
+/* Start Hero Section Styles */
 .hero-small {
     height: 300px;
     display: flex;
@@ -65,137 +57,978 @@ header {
     font-size: 36px;
     font-weight: bold;
 }
+/* End Hero Section Styles */
 
-/* Our Story Section */
-.our-story {
+/* Start Section Styles */
+/* This section styles the sections within the main content */
+section {
     padding: 60px 0;
 }
 
-.our-story h2 {
-    font-size: 32px;
-    font-weight: bold;
+section h2 {
+    font-size: 36px;
     margin-bottom: 30px;
+    text-align: center;
+}
+/* End Section Styles */
+
+/* Start Introduction Section Styles */
+/* This section styles the introduction section */
+.introduction {
+    background-color: var(--light-color);
+}
+/* End Introduction Section Styles */
+
+/* Start Our Story Section Styles */
+.our-story {
+    background-color: var(--light-color);
+    padding: 80px 0;
+    position: relative;
 }
 
-/* Our Members Section */
-.our-members {
-    padding: 60px 0;
+.section-title {
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.story-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid grey;
+}
+
+.story-image {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-right: 40px;
+}
+
+.story-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.story-image img:hover {
+    transform: scale(1.05);
+}
+
+.story-content {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.story-title {
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.date {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.date i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.story-text-wrapper {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--light-color);
+    border-radius: 5px;
+    padding: 20px;
     background-color: #f8f9fa;
 }
 
-.our-members h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.member-card {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.member-card img {
+.story-text-wrapper p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
-.member-card h4 {
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+.btn-primary i {
+    margin-right: 5px;
+}
+
+/* Added styles for scrollbar */
+.story-text-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.story-text-wrapper::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.story-text-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.story-text-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.our-story .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.our-story .read-more:hover {
+    color: var(--dark-color);
+}
+
+.our-story .background-shape {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+/* End Our Story Section Styles */
+
+/* Start Mission Section Styles */
+.mission {
+    background-color: var(--light-color);
+    padding: 80px 0;
+}
+.mission .section-title {
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.mission .mission-icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.mission .mission-points {
+    margin-top: 40px;
+}
+
+.mission .mission-point {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mission .mission-point i {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.mission .mission-point h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* End Mission Section Styles */
+
+/* Start Vision Section Styles */
+.vision {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 80px 0;
+}
+
+.vision .section-title {
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+}
+
+.vision .vision-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.vision .vision-statement {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.vision .vision-points {
+    margin-top: 40px;
+}
+
+.vision .vision-point {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.vision .vision-point i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.vision .vision-point h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* End Vision Section Styles */
+
+/* Media Queries */
+/* This section adjusts the styles for smaller screen sizes */
+@media (max-width: 767px) {
+    .our-story .story-card {
+        flex-direction: column;
+    }
+
+    .our-story .story-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .our-story .story-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Start Values and Principles Section Styles */
+.section-heading {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.section-heading i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.values-list li i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.values-list li strong {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .values-list li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values-list li i,
+    .values-list li strong {
+        margin-bottom: 5px;
+    }
+
+    .values-list li span {
+        text-align: center;
+    }
+}
+
+/* Additional Styles */
+.values {
+    background-image: url('path/to/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+
+.values-list li i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--primary-color);
+    animation: rotate 3s infinite linear;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Add this line to make the heading bold */
+}
+/* End Values and Principles Section Styles */
+
+/* Start Programs and Services Section Styles */
+.section-title {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.program-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.program-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.program-card-img {
+    overflow: hidden;
+}
+
+.program-card-img img {
+    transition: all 0.3s ease-in-out;
+}
+
+.program-card:hover .program-card-img img {
+    transform: scale(1.1);
+}
+
+.program-card-body {
+    padding: 20px;
+}
+
+.program-card-body h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.program-card-body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-heading i {
+    margin-bottom: 10px;
+}
+
+/* Custom button styles */
+.btn-view-programs {
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-view-programs:hover {
+    background-color: var(--dark-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+
+    background-color: #007bff;
+    color: white;
+}
+/* End Programs and Services Section Styles */
+
+/* Start Impact and Success Stories Section Styles */
+.section-title {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-title i {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.testimonial {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.testimonial:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.testimonial-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-img img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.testimonial-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonial-content p i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 0 5px;
+}
+
+.testimonial-content h4 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.member-card p {
-    margin-bottom: 0;
+.testimonial-role {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+/* End Impact and Success Stories Section Styles */
+
+/* Start Leadership Team Section Styles */
+.team {
+    padding: 80px 0;
 }
 
-/* Additional Information Section */
-.additional-info {
-    padding: 60px 0;
+.section-heading {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.additional-info h2 {
-    font-size: 32px;
+.section-heading i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
 }
 
-.img-fluid {
-    height: 280px;
-    width: 280px;
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
 }
 
-/* Our Members Section */
-.our-members {
+.subsection-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
 }
 
-.our-members .member-card {
-    width: 20%;
-    float: left;
-    padding: 10px;
-    box-sizing: border-box;
+.subsection-title i {
+    margin-right: 10px;
+    color: var(--primary-color);
 }
 
-.our-members .member-card img {
+.team-subsection {
+    margin-bottom: 40px;
+}
+
+.team-member {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+    border: 1px solid gray;
+}
+
+.team-member:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.team-member-img {
+    overflow: hidden;
+}
+
+.team-member-img img {
+    transition: all 0.3s ease-in-out;
     width: 100%;
     height: auto;
-    aspect-ratio: 1/1; /* Makes the image square */
-    object-fit: cover; /* Maintains aspect ratio and fills the available space */
+}
+
+.team-member:hover .team-member-img img {
+    transform: scale(1.1);
+}
+
+.team-member-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-member-info h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team-member-info p {
+    font-size: 16px;
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
-@media (max-width: 991px) {
-    .our-members .member-card {
-        width: 25%;
-    }
+.team-member-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-@media (max-width: 767px) {
-    .our-members .member-card {
-        width: 33.33%;
-    }
+.team-member-social li {
+    margin: 0 5px;
 }
 
-@media (max-width: 575px) {
-    .our-members .member-card {
-        width: 50%;
-    }
+.team-member-social li a {
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #f8f9fa;
-    padding: 30px 0;
+.team-member-social li a:hover {
+    color: var(--secondary-color);
+}
+/* End Leadership Team Section Styles */
+
+/* Start Partners and Sponsors Section Styles */
+.partners-icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
-footer h4 {
+.partners-description {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.partner-logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+.partner-logos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.partner-logo {
+    max-width: 150px; /* Adjust the maximum width of the logos */
+    margin: 10px; /* Adjust the spacing between logos */
+    transition: transform 0.3s ease-in-out;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo img {
+    max-width: 50px;
+    height: auto;
+}
+/* End Partners and Sponsors Section Styles */
+
+/* Start Financial Transparency Section Styles */
+.transparency {
+    padding: 80px 0;
+}
+
+.section-heading {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-heading i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px; /* Increased margin-bottom */
+    display: block;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-footer ul li a {
-    color: #007bff; /* Change quick links to blue initially */
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.transparency p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.transparency a {
+    color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
-footer ul li a:hover {
-    color: #0056b3; /* Change color on hover to deep blue */
-    text-decoration: underline; /* Add underline on hover */
+.transparency a:hover {
+    color: var(--dark-color);
+}
+/* End Financial Transparency Section Styles */
+
+/* Start Get Involved Section Styles */
+.get-involved {
+    background-color: var(--primary-color);
+    padding: 100px 0;
 }
 
-footer ul li a:active {
-    color: #0056b3; /* Change color when clicked to deep blue */
-    text-decoration: underline; /* Add underline when clicked */
+.get-involved h2 {
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-footer .list-inline-item a {
-    color: #007bff; /* Change social media icons to blue initially */
+.get-involved p {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.get-involved .btn {
+    margin: 0 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.get-involved .btn-primary {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+
+.get-involved .btn-primary:hover {
+    background-color: var(--light-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.get-involved .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.get-involved .btn-secondary:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* End Get Involved Section Styles */
+
+/* Start Contact Information Section Styles */
+.contact {
+    background-color: var(--light-color);
+    padding: 80px 0;
+}
+
+.section-heading {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-heading i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.contact .section-description {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.contact-icon {
+    font-size: 24px; /* Changed to fa-lg size */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-item-icon {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-item h4 {
+    font-family: var(--heading-font-family);
+    font-weight: 600;
     font-size: 20px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
 }
 
-footer .list-inline-item a:hover,
-footer .list-inline-item a:focus {
-    color: #0056b3; /* Change color on hover/focus to deep blue */
+.contact-item p {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons li a {
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: var(--dark-color);
+}
+/* End Contact Information Section Styles */
+
+/* This section styles the scrollbar for the story text wrapper */
+.story-text-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.story-text-wrapper::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.story-text-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.story-text-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+/*Imported from footer.html via headerAndFooter.js*/
+
+.team-member{
+    border: 1px solid gray;
+}
+
+/*Scrollbar Change*/
+/* Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid #f1f1f1; /* Space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin; /* Make scrollbar thinner */
+    scrollbar-color: #888 #f1f1f1; /* Set colors for the thumb and track */
+}
+
+/* Edge */
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: #888 #f1f1f1; /* Set colors for the thumb and track */
+        scrollbar-width: thin; /* Make scrollbar thinner */
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for the whole document */
 }
