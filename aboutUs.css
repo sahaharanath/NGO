@@ -125,6 +125,8 @@ section h2 {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    border: 2px solid #007BFF;
+
 }
 
 .story-image img:hover {
@@ -1031,4 +1033,26 @@ html {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth; /* Smooth scrolling for the whole document */
+}
+
+/* Mission section heading styles: Applies bold font-weight and adjusts font-size and margin for mission point headings */
+.mission .mission-point h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.mission .mission-point h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold !important;
+}
+
+/* Vision section heading styles: Applies bold font-weight and adjusts font-size and margin for vision point headings */
+.vision .vision-point h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.vision .vision-point h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold !important;
 }
